@@ -1,13 +1,81 @@
-body {
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;800;900&display=swap);
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fff;
+  font-weight: 300;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.wrapper {
+  width: 1280px;
+  margin: 50px auto;
+}
+
+header .logo {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+header .nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav ul {
+  display: flex;
+  column-gap: 15px;
+}
+
+.nav ul li {
+  transition: opacity 500ms ease;
+}
+
+.nav ul li:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+header .presentation {
+  margin: 50px 0;
+  background: url("./img/bg.jpg") no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 700px;
+  background-position: center center;
+  background-blend-mode: multiply;
+  background-color: #bcbcbc;
+  position: relative;
+}
+
+header .presentation::after {
+  content: "Лучшие товары для вашего дома";
+  position: absolute;
+  top: 100px;
+  left: 50px;
+  color: #fff;
+  width: 300px;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+header .presentation::before {
+  content: "по низким ценам";
+  position: absolute;
+  top: 250px;
+  left: 50px;
+  color: #fff;
+  width: 300px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+footer {
+  text-align: center;
+  margin-top: 100px;
 }
